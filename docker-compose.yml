@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  zookeeper:
+    container_name:  zookeeper
+    image: wurstmeister/zookeeper
+    ports:
+      - 2181:2181
+  kafka:
+    container_name:  kafka
+    image:  wurstmeister/kafka
+    ports:
+      - 9092:9092
+    volumes:
+      - ./data/kafka:containerPath:ro
+    environment:
+      - KAFKA_ADVERTISED_HOST_NAME=kafka
+      - ZOOKEEPER_HOSTS=zookeeper:2181
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+      - 27017:27017
+    volumes:
+      - ./data/mongo:containerPath:ro
+      
