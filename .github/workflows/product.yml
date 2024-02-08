@@ -1,4 +1,4 @@
-name: Build & Publish user service Docker image
+name: Build & Publish product service Docker image
 
 on:
     push:
