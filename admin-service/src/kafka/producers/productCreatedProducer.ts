@@ -21,7 +21,7 @@ export const productCreatedProducer = async (
                 }]
             },
             {
-                topic: 'to-cart',
+                topic: 'to-product',
                 messages: [{
                     key: 'productCreated',
                     value: JSON.stringify(data)
