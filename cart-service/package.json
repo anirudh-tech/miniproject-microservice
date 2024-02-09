@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@types/cookie-parser": "^1.4.6",
-    "@types/express": "^4.17.21"
+    "@types/express": "^4.17.21",
+    "ttypescript": "^1.5.15"
   }
 }
