@@ -4,7 +4,7 @@ import productRouter from './routes/productRoutes'
 
 
 const app: Application = express()
-const PORT: number = Number(process.env.PORT) || 4002
+const PORT: number = Number(process.env.PORT) || 4003
 
 app.use(express.json())
 app.use(cookieParser())

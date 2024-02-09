@@ -1,10 +1,10 @@
-name: Build & Publish cart service Docker image
+name: Build & Publish admin service Docker image
 
 on:
     push:
         branches: ['main']
         paths:
-            - 'cart-service/**'
+            - 'admin-service/**'
     workflow_dispatch:
 
 jobs:
@@ -24,6 +24,6 @@ jobs:
             - name: Build and push Docker image
               uses: docker/build-push-action@v4
               with:
-                context: ./cart-service/
+                context: ./admin-service/
                 push: true
-                tags: anirudhjagath/ecomshop-cart-service:latest
+                tags: anirudhjagath/ecomshop-admin-service:latest
